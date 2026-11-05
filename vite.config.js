@@ -5,14 +5,15 @@ import handlebars from 'vite-plugin-handlebars';
 
 const __dirname = import.meta.dirname;
 
-const base_path = import.meta.env?.BASE_URL ?? '';
+const base_path = '/Portafolio/';
+
 function obtenerHtmlFiles() {
     return Object.fromEntries(
         glob.sync(
             './**/*.html',
             {
                 ignore: [
-                    './dist/**',
+                    './docs/**',
                     './node_modules/**'
                 ]
             }
@@ -30,6 +31,7 @@ export default defineConfig(
         appType: 'mpa',
         base: base_path,
         build: {
+            outDir: 'docs',
             rolldownOptions: {
                 input: obtenerHtmlFiles()
             }
