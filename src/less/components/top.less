@@ -1,0 +1,27 @@
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 50px 0;
+
+  @media (max-width: @bp) {
+    padding: 30px 25px 0;
+  }
+
+  .brand h1 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: 18px;
+    color: @tagline;
+    margin-top: 4px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}

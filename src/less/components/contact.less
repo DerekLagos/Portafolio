@@ -1,0 +1,24 @@
+.contact {
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  @media (max-width: @bp) {
+    left: 25px;
+    bottom: 25px;
+  }
+
+  .item {
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  .icon {
+    font-weight: 700;
+    width: 14px;
+  }
+}
